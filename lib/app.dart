@@ -1,11 +1,13 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:pacman/inimigo/fantasma_vermelho.dart';
+import 'package:pacman/ponto/incrementar_ponto.dart';
 
 import 'inimigo/fantasma_azul.dart';
 import 'inimigo/fantasma_laranja.dart';
 import 'inimigo/fantasma_rosa.dart';
 import 'pacman/pacman.dart';
+import 'ponto/ponto.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -34,6 +36,12 @@ class App extends StatelessWidget {
               position: properties.position,
               pacman: Pacman(properties.position, 0),
               posicaoInicial: properties.position,
+            ),
+        'ponto': (properties) => Ponto(
+              position: properties.position,
+              incrementarPontos:
+                  IncrementarPontos(pacman: Pacman(properties.position, 0)),
+              pacman: Pacman(properties.position, 0),
             ),
       }),
       player: Pacman(Vector2(31, 64), 0),
