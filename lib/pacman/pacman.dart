@@ -25,7 +25,15 @@ class Pacman extends SimplePlayer with ObjectCollision {
 
   bool poder = false;
   int pontuacao;
-  
+
+  @override
+  void die() {
+    gameRef.add(GameDecoration.withAnimation(
+        animation: PacmanSprite.pacmanDead, position: position, size: size));
+    removeFromParent();
+    super.die();
+  }
+
   void ativarPoder() {
     poder = true;
     Future.delayed(const Duration(seconds: 8), () {

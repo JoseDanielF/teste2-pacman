@@ -94,6 +94,7 @@ class Inimigo extends SimpleEnemy
       }
     }
   }
+
   @override
   void onContactExit(GameComponent component) {}
 }

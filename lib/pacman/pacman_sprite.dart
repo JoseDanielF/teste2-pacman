@@ -73,7 +73,7 @@ class PacmanSprite {
         ),
       );
 
-  static get pacManDead => SpriteAnimation.load(
+  static get pacmanDead => SpriteAnimation.load(
         'players/pacman/morte_pac_man.png',
         SpriteAnimationData.sequenced(
           amount: 11,
