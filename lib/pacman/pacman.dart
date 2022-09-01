@@ -3,7 +3,7 @@ import 'package:bonfire/bonfire.dart';
 import 'pacman_sprite.dart';
 
 class Pacman extends SimplePlayer with ObjectCollision {
-  Pacman(Vector2? position)
+  Pacman(Vector2? position, this.pontuacao)
       : super(
           size: Vector2(32, 32),
           animation: SimpleDirectionAnimation(
@@ -24,7 +24,8 @@ class Pacman extends SimplePlayer with ObjectCollision {
   }
 
   bool poder = false;
-
+  int pontuacao;
+  
   void ativarPoder() {
     poder = true;
     Future.delayed(const Duration(seconds: 8), () {

@@ -17,26 +17,26 @@ class App extends StatelessWidget {
       map: WorldMapByTiled('pac_man_mapa.tmj', objectsBuilder: {
         'fantasmaVermelho': ((properties) => FantasmaVermelho(
               position: properties.position,
-              pacman: Pacman(properties.position),
+              pacman: Pacman(properties.position, 0),
               posicaoInicial: properties.position,
             )),
         'fantasmaLaranja': (properties) => FantasmaLaranja(
               position: properties.position,
-              pacman: Pacman(properties.position),
+              pacman: Pacman(properties.position, 0),
               posicaoInicial: properties.position,
             ),
         'fantasmaAzul': (properties) => FantasmaAzul(
               position: properties.position,
-              pacman: Pacman(properties.position),
+              pacman: Pacman(properties.position, 0),
               posicaoInicial: properties.position,
             ),
         'fantasmaRosa': (properties) => FantasmaRosa(
               position: properties.position,
-              pacman: Pacman(properties.position),
+              pacman: Pacman(properties.position, 0),
               posicaoInicial: properties.position,
             ),
       }),
-      player: Pacman(Vector2(31, 64)),
+      player: Pacman(Vector2(31, 64), 0),
       cameraConfig: CameraConfig(moveOnlyMapArea: true, zoom: 1),
     );
   }
