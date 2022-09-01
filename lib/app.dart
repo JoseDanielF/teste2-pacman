@@ -1,5 +1,6 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
+import 'package:pacman/fruta/fruta.dart';
 import 'package:pacman/inimigo/fantasma_vermelho.dart';
 import 'package:pacman/ponto/incrementar_ponto.dart';
 
@@ -41,6 +42,10 @@ class App extends StatelessWidget {
               position: properties.position,
               incrementarPontos:
                   IncrementarPontos(pacman: Pacman(properties.position, 0)),
+              pacman: Pacman(properties.position, 0),
+            ),
+        'fruta': (properties) => Fruta(
+              position: properties.position,
               pacman: Pacman(properties.position, 0),
             ),
       }),
