@@ -22,4 +22,13 @@ class Pacman extends SimplePlayer with ObjectCollision {
     setupCollision(CollisionConfig(
         collisions: [CollisionArea.rectangle(size: Vector2(30, 30))]));
   }
+
+  bool poder = false;
+
+  void ativarPoder() {
+    poder = true;
+    Future.delayed(const Duration(seconds: 8), () {
+      poder = false;
+    });
+  }
 }

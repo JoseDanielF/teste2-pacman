@@ -7,7 +7,7 @@ import 'package:pacman/pacman/pacman.dart';
 
 class FantasmaLaranja extends Inimigo {
   FantasmaLaranja({required super.position, required Pacman pacman, required posicaoInicial})
-      : super(pacMan: pacman, simpleDirectionAnimation: simpleDirectionAnimationGetter, posicaoInicial: posicaoInicial);
+      : super(pacman: pacman, simpleDirectionAnimation: simpleDirectionAnimationGetter, posicaoInicial: posicaoInicial);
 
   static SimpleDirectionAnimation get simpleDirectionAnimationGetter => SimpleDirectionAnimation(
         idleRight: FantasmaLaranjaSprite.idleRight,

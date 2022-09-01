@@ -1,6 +1,6 @@
 import 'package:bonfire/bonfire.dart';
 
-class FantasmaSprite {
+class FantasmaDeadSprite {
   static get idleMortoLeft => SpriteAnimation.load(
         'players/inimigos/fantasma_morto_esquerda.png',
         SpriteAnimationData.sequenced(

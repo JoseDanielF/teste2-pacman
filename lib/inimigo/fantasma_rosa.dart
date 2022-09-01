@@ -10,7 +10,7 @@ class FantasmaRosa extends Inimigo {
       required Pacman pacman,
       required posicaoInicial})
       : super(
-            pacMan: pacman,
+            pacman: pacman,
             simpleDirectionAnimation: simpleDirectionAnimationGetter,
             posicaoInicial: posicaoInicial);
 
