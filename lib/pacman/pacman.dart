@@ -17,7 +17,7 @@ class Pacman extends SimplePlayer with ObjectCollision {
             runDown: PacmanSprite.runDown,
           ),
           position: position ?? Vector2(10, 10),
-          speed: 50,
+          speed: 55,
         ) {
     setupCollision(CollisionConfig(
         collisions: [CollisionArea.rectangle(size: Vector2(30, 30))]));
@@ -36,7 +36,7 @@ class Pacman extends SimplePlayer with ObjectCollision {
 
   void ativarPoder() {
     poder = true;
-    Future.delayed(const Duration(seconds: 8), () {
+    Future.delayed(const Duration(seconds: 9), () {
       poder = false;
     });
   }

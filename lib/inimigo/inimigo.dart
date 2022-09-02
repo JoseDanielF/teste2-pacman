@@ -3,7 +3,7 @@ import 'package:pacman/inimigo/fantasma_dead.dart';
 import 'package:pacman/pacman/pacman.dart';
 
 class Inimigo extends SimpleEnemy
-    with ObjectCollision, AutomaticRandomMovement, Sensor {
+    with ObjectCollision, AutomaticRandomMovement {
   SimpleDirectionAnimation simpleDirectionAnimation;
   Pacman pacman;
   double radiusCollision = 7;
@@ -18,7 +18,7 @@ class Inimigo extends SimpleEnemy
           position: position,
           size: Vector2(32, 32),
           animation: simpleDirectionAnimation,
-          speed: 75,
+          speed: 70,
         ) {
     setupCollision(CollisionConfig(collisions: [
       CollisionArea.rectangle(size: Vector2(30, 30), align: Vector2(1, 1))
@@ -35,18 +35,18 @@ class Inimigo extends SimpleEnemy
             runRight: FantasmaDeadSprite.medo));
 
         speed = 60;
-        Future.delayed(const Duration(seconds: 8), () {
+        Future.delayed(const Duration(seconds: 9), () {
           replaceAnimation(simpleDirectionAnimation);
           speed = 80;
         });
         seeAndMoveToAttackRange(
-            minDistanceFromPlayer: 300,
+            minDistanceFromPlayer: 250,
             positioned: (p) {},
             radiusVision: 64,
             notObserved: () {
               runRandomMovement(dt,
-                  maxDistance: 200,
-                  minDistance: 100,
+                  maxDistance: 190,
+                  minDistance: 95,
                   speed: speed,
                   timeKeepStopped: 20);
             });
@@ -57,8 +57,8 @@ class Inimigo extends SimpleEnemy
             closePlayer: (player) {},
             notObserved: () {
               runRandomMovement(dt,
-                  maxDistance: 200,
-                  minDistance: 100,
+                  maxDistance: 190,
+                  minDistance: 95,
                   speed: speed,
                   timeKeepStopped: 20);
             });
@@ -94,7 +94,4 @@ class Inimigo extends SimpleEnemy
       }
     }
   }
-
-  @override
-  void onContactExit(GameComponent component) {}
 }
