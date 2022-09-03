@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:pacman/fruta/fruta.dart';
 import 'package:pacman/inimigo/fantasma_vermelho.dart';
 import 'package:pacman/ponto/incrementar_ponto.dart';
-
 import 'inimigo/fantasma_azul.dart';
 import 'inimigo/fantasma_laranja.dart';
 import 'inimigo/fantasma_rosa.dart';
